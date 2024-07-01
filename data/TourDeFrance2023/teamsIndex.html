@@ -1,0 +1,785 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <style type="text/css">td {
+  padding: 0 30 0 0;
+}
+.team td:nth-child(1) { width: 80; }
+.team td:nth-child(3) { width: 100; }
+div#cyclistsIndexLink {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 3px solid #8AC007;
+  font-size: 200%
+  background: white;
+}
+div#teamNamesLink {
+  position: fixed;
+  top: 50;
+  right: 0;
+  border: 3px solid #8AC007;
+  font-size: 200%
+  background: white;
+}
+</style>
+        <script>
+function myLoad() {
+   let myString = window.location.href;
+   let myRegexp = /(?:[^#]*)#(.*)/;
+   let match = myRegexp.exec(myString);
+   let id = match[1];
+   console.log("id: " + id);
+   let elem = document.getElementById(id);
+   elem.style.backgroundColor = '#e5e5e5';
+ }
+</script>
+    </head>
+    <body onload="myLoad()">
+        <div id="cyclistsIndexLink">
+            <a href="cyclistsIndex.html">cyclists index</a>
+        </div>
+        <div id="teamNamesLink">
+            <a href="teamNamesIndex.html">team names</a>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <table class="team" id="team_JUMBOVISMA">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">JUMBO-VISMA</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>1</td><td>Vingegaard JONAS</td><td>den</td>
+                        </tr>
+                        <tr>
+                            <td>2</td><td>Benoot TIESJ</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>3</td><td>Kelderman WILCO</td><td>ned</td>
+                        </tr>
+                        <tr>
+                            <td>4</td><td>Kuss SEPP</td><td>usa</td>
+                        </tr>
+                        <tr>
+                            <td>5</td><td>Laporte CHRISTOPHE</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>6</td><td>Aert WOUT VAN</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>7</td><td>Baarle DYLAN VAN</td><td>ned</td>
+                        </tr>
+                        <tr>
+                            <td>8</td><td>Hooydonck NATHAN VAN</td><td>bel</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_UAETEAMEMIRATES">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">UAE TEAM EMIRATES</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>11</td><td>Poga&#269;ar TADEJ</td><td>slo</td>
+                        </tr>
+                        <tr>
+                            <td>12</td><td>Bjerg MIKKEL</td><td>den</td>
+                        </tr>
+                        <tr>
+                            <td>14</td><td>Grossschartner FELIX</td><td>aut</td>
+                        </tr>
+                        <tr>
+                            <td>15</td><td>Laengen VEGARD STAKE</td><td>nor</td>
+                        </tr>
+                        <tr>
+                            <td>16</td><td>Majka RAFAL</td><td>pol</td>
+                        </tr>
+                        <tr>
+                            <td>17</td><td>Soler MARC</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>18</td><td>Trentin MATTEO</td><td>ita</td>
+                        </tr>
+                        <tr>
+                            <td>19</td><td>Yates ADAM</td><td>gbr</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="team" id="team_INEOSGRENADIERS">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">INEOS GRENADIERS</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>21</td><td>Bernal EGAN</td><td>col</td>
+                        </tr>
+                        <tr>
+                            <td>22</td><td>Castroviejo JONATHAN</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>23</td><td>Matarranz OMAR FRAILE</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>24</td><td>Kwiatkowski MICHAL</td><td>pol</td>
+                        </tr>
+                        <tr>
+                            <td>25</td><td>Poveda DANIEL FELIPE MARTINEZ</td><td>col</td>
+                        </tr>
+                        <tr>
+                            <td>26</td><td>Pidcock THOMAS</td><td>gbr</td>
+                        </tr>
+                        <tr>
+                            <td>27</td><td>Cano CARLOS RODRIGUEZ</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>28</td><td>Turner BEN</td><td>gbr</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_GROUPAMAFDJ">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">GROUPAMA - FDJ</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>31</td><td>Gaudu DAVID</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>32</td><td>Geniets K&Eacute;VIN</td><td>lux</td>
+                        </tr>
+                        <tr>
+                            <td>33</td><td>K&uuml;ng STEFAN</td><td>sui</td>
+                        </tr>
+                        <tr>
+                            <td>34</td><td>Gac OLIVIER LE</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>35</td><td>Madouas VALENTIN</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>36</td><td>Pacher QUENTIN</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>37</td><td>Pinot THIBAUT</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>38</td><td>Berg LARS VAN DEN</td><td>ned</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="team" id="team_EFEDUCATIONEASYPOST">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">EF EDUCATION - EASYPOST</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>41</td><td>Carapaz RICHARD</td><td>ecu</td>
+                        </tr>
+                        <tr>
+                            <td>42</td><td>Amador ANDREY</td><td>crc</td>
+                        </tr>
+                        <tr>
+                            <td>43</td><td>Bettiol ALBERTO</td><td>ita</td>
+                        </tr>
+                        <tr>
+                            <td>44</td><td>Chaves JHOAN ESTEBAN</td><td>col</td>
+                        </tr>
+                        <tr>
+                            <td>45</td><td>Nielsen MAGNUS CORT</td><td>den</td>
+                        </tr>
+                        <tr>
+                            <td>46</td><td>Powless NEILSON</td><td>usa</td>
+                        </tr>
+                        <tr>
+                            <td>47</td><td>Shaw JAMES</td><td>gbr</td>
+                        </tr>
+                        <tr>
+                            <td>48</td><td>Uran RIGOBERTO</td><td>col</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_SOUDALQUICKSTEP">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">SOUDAL QUICK-STEP</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>51</td><td>Alaphilippe JULIAN</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>52</td><td>Asgreen KASPER</td><td>den</td>
+                        </tr>
+                        <tr>
+                            <td>53</td><td>Cavagna R&Eacute;MI</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>54</td><td>Declercq TIM</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>55</td><td>Devenyns DRIES</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>56</td><td>Jakobsen FABIO</td><td>ned</td>
+                        </tr>
+                        <tr>
+                            <td>57</td><td>Lampaert YVES</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>58</td><td>M&oslash;rk&oslash;v MICHAEL</td><td>den</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="team" id="team_BAHRAINVICTORIOUS">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">BAHRAIN VICTORIOUS</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>62</td><td>Landa MIKEL</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>63</td><td>Arndt NIKIAS</td><td>ger</td>
+                        </tr>
+                        <tr>
+                            <td>64</td><td>Bauhaus PHIL</td><td>ger</td>
+                        </tr>
+                        <tr>
+                            <td>65</td><td>Lopez PELLO BILBAO</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>66</td><td>Haig JACK</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>67</td><td>Mohoric MATEJ</td><td>slo</td>
+                        </tr>
+                        <tr>
+                            <td>68</td><td>Poels WOUT</td><td>ned</td>
+                        </tr>
+                        <tr>
+                            <td>69</td><td>Wright FRED</td><td>gbr</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_BORAHANSGROHE">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">BORA - HANSGROHE</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>71</td><td>Hindley JAI</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>72</td><td>Buchmann EMANUEL</td><td>ger</td>
+                        </tr>
+                        <tr>
+                            <td>73</td><td>Haller MARCO</td><td>aut</td>
+                        </tr>
+                        <tr>
+                            <td>74</td><td>Jungels BOB</td><td>lux</td>
+                        </tr>
+                        <tr>
+                            <td>75</td><td>Konrad PATRICK</td><td>aut</td>
+                        </tr>
+                        <tr>
+                            <td>76</td><td>Meeus JORDI</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>77</td><td>Politt NILS</td><td>ger</td>
+                        </tr>
+                        <tr>
+                            <td>78</td><td>Poppel DANNY VAN</td><td>ned</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="team" id="team_LIDLTREK">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">LIDL - TREK</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>81</td><td>Ciccone GIULIO</td><td>ita</td>
+                        </tr>
+                        <tr>
+                            <td>82</td><td>Gallopin TONY</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>83</td><td>Jensen SKJELMOSE MATTIAS</td><td>den</td>
+                        </tr>
+                        <tr>
+                            <td>84</td><td>Kirsch ALEX</td><td>lux</td>
+                        </tr>
+                        <tr>
+                            <td>85</td><td>Perez JUAN PEDRO LOPEZ</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>86</td><td>Pedersen MADS</td><td>den</td>
+                        </tr>
+                        <tr>
+                            <td>87</td><td>Simmons QUINN</td><td>usa</td>
+                        </tr>
+                        <tr>
+                            <td>88</td><td>Stuyven JASPER</td><td>bel</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_AGRCITROENTEAM">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">AG2R CITROEN TEAM</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>91</td><td>O'connor BEN</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>92</td><td>Berthet CL&Eacute;MENT</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>93</td><td>Cosnefroy BENOIT</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>94</td><td>Dewulf STAN</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>95</td><td>Gall FELIX</td><td>aut</td>
+                        </tr>
+                        <tr>
+                            <td>96</td><td>Naesen OLIVER</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>97</td><td>Peintre AUR&Eacute;LIEN PARET</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>98</td><td>Peters NANS</td><td>fra</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="team" id="team_ALPECINDECEUNINCK">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">ALPECIN-DECEUNINCK</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>101</td><td>Poel MATHIEU VAN DER</td><td>ned</td>
+                        </tr>
+                        <tr>
+                            <td>102</td><td>Dillier SILVAN</td><td>sui</td>
+                        </tr>
+                        <tr>
+                            <td>103</td><td>Gogl MICHAEL</td><td>aut</td>
+                        </tr>
+                        <tr>
+                            <td>104</td><td>Hermans QUINTEN</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>105</td><td>Andersen S&Oslash;REN KRAGH</td><td>den</td>
+                        </tr>
+                        <tr>
+                            <td>106</td><td>Philipsen JASPER</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>107</td><td>Rickaert JONAS</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>108</td><td>Sinkeldam RAMON</td><td>ned</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_INTERMARCH&Eacute;CIRCUSWANTY">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">INTERMARCH&Eacute; - CIRCUS - WANTY</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>111</td><td>Girmay BINIAM</td><td>eri</td>
+                        </tr>
+                        <tr>
+                            <td>112</td><td>Calmejane LILIAN</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>113</td><td>Costa RUI</td><td>por</td>
+                        </tr>
+                        <tr>
+                            <td>114</td><td>Meintjes LOUIS</td><td>rsa</td>
+                        </tr>
+                        <tr>
+                            <td>115</td><td>Petit ADRIEN</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>116</td><td>Smith DION</td><td>nzl</td>
+                        </tr>
+                        <tr>
+                            <td>117</td><td>Teunissen MIKE</td><td>ned</td>
+                        </tr>
+                        <tr>
+                            <td>118</td><td>Zimmermann GEORG</td><td>ger</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="team" id="team_COFIDIS">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">COFIDIS</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>121</td><td>Martin GUILLAUME</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>122</td><td>Coquard BRYAN</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>123</td><td>Geschke SIMON</td><td>ger</td>
+                        </tr>
+                        <tr>
+                            <td>124</td><td>Insausti ION IZAGUIRRE</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>125</td><td>Lafay VICTOR</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>126</td><td>Perez ANTHONY</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>127</td><td>Renard ALEXIS</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>128</td><td>Zingle AXEL</td><td>fra</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_MOVISTARTEAM">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">MOVISTAR TEAM</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>131</td><td>Mas ENRIC</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>132</td><td>Guerreiro RUBEN ALMEIDA</td><td>por</td>
+                        </tr>
+                        <tr>
+                            <td>133</td><td>Deba ALEX ARANBURU</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>134</td><td>Insausti GORKA IZAGIRRE</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>135</td><td>Jorgenson MATTEO</td><td>usa</td>
+                        </tr>
+                        <tr>
+                            <td>136</td><td>M&uuml;hlberger GREGOR</td><td>aut</td>
+                        </tr>
+                        <tr>
+                            <td>137</td><td>Oliveira NELSON</td><td>por</td>
+                        </tr>
+                        <tr>
+                            <td>138</td><td>Pedrero ANTONIO</td><td>esp</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="team" id="team_TEAMDSMFIRMENICH">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">TEAM DSM - FIRMENICH</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>141</td><td>Bardet ROMAIN</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>142</td><td>Degenkolb JOHN</td><td>ger</td>
+                        </tr>
+                        <tr>
+                            <td>143</td><td>Dinham MATTHEW</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>144</td><td>Edmondson ALEXANDER</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>145</td><td>Eekhoff NILS</td><td>ned</td>
+                        </tr>
+                        <tr>
+                            <td>146</td><td>Hamilton CHRISTOPHER</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>147</td><td>Vermaerke KEVIN</td><td>usa</td>
+                        </tr>
+                        <tr>
+                            <td>148</td><td>Welsford SAM</td><td>aus</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_ISRAELPREMIERTECH">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">ISRAEL - PREMIER TECH</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>151</td><td>Woods MICHAEL</td><td>can</td>
+                        </tr>
+                        <tr>
+                            <td>152</td><td>Boivin GUILLAUME</td><td>can</td>
+                        </tr>
+                        <tr>
+                            <td>153</td><td>Clarke SIMON</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>154</td><td>Houle HUGO</td><td>can</td>
+                        </tr>
+                        <tr>
+                            <td>155</td><td>Neilands KRISTS</td><td>lat</td>
+                        </tr>
+                        <tr>
+                            <td>156</td><td>Schultz NICHOLAS</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>157</td><td>Strong CORBIN</td><td>nzl</td>
+                        </tr>
+                        <tr>
+                            <td>158</td><td>Teuns DYLAN</td><td>bel</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="team" id="team_TEAMJAYCOALULA">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">TEAM JAYCO ALULA</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>161</td><td>Yates SIMON</td><td>gbr</td>
+                        </tr>
+                        <tr>
+                            <td>162</td><td>Craddock G LAWSON</td><td>usa</td>
+                        </tr>
+                        <tr>
+                            <td>163</td><td>Durbridge LUKE</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>164</td><td>Groenewegen DYLAN</td><td>ned</td>
+                        </tr>
+                        <tr>
+                            <td>165</td><td>Harper CHRIS</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>166</td><td>Jensen JUUL CHRISTOPHER</td><td>den</td>
+                        </tr>
+                        <tr>
+                            <td>167</td><td>Mezgec LUKA</td><td>slo</td>
+                        </tr>
+                        <tr>
+                            <td>168</td><td>Reinders ELMAR</td><td>ned</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_TEAMARKEASAMSIC">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">TEAM ARKEA - SAMSIC</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>171</td><td>Barguil WARREN</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>172</td><td>Biermans JENTHE</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>173</td><td>Champoussin CL&Eacute;MENT</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>174</td><td>Delaplace ANTHONY</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>175</td><td>Guglielmi SIMON</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>176</td><td>Louvel MATIS</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>177</td><td>Mozzato LUCA</td><td>ita</td>
+                        </tr>
+                        <tr>
+                            <td>178</td><td>Pichon LAURENT</td><td>fra</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="team" id="team_LOTTODSTNY">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">LOTTO DSTNY</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>181</td><td>Ewan CALEB</td><td>aus</td>
+                        </tr>
+                        <tr>
+                            <td>182</td><td>Campenaerts VICTOR</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>183</td><td>Buyst JASPER DE</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>184</td><td>Eenkhoorn PASCAL</td><td>ned</td>
+                        </tr>
+                        <tr>
+                            <td>185</td><td>Frison FREDERIK</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>186</td><td>Guarnieri JACOPO</td><td>ita</td>
+                        </tr>
+                        <tr>
+                            <td>187</td><td>Gils MAXIM VAN</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>188</td><td>Vermeersch FLORIAN</td><td>bel</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_ASTANAQAZAQSTANTEAM">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">ASTANA QAZAQSTAN TEAM</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>191</td><td>Cavendish MARK</td><td>gbr</td>
+                        </tr>
+                        <tr>
+                            <td>192</td><td>Bol CEES</td><td>ned</td>
+                        </tr>
+                        <tr>
+                            <td>193</td><td>Cruz DAVID DE LA</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>194</td><td>Fedorov YEVGENIY</td><td>kaz</td>
+                        </tr>
+                        <tr>
+                            <td>195</td><td>Lutsenko ALEXEY</td><td>kaz</td>
+                        </tr>
+                        <tr>
+                            <td>196</td><td>Moscon GIANNI</td><td>ita</td>
+                        </tr>
+                        <tr>
+                            <td>197</td><td>Sanchez LUIS LEON</td><td>esp</td>
+                        </tr>
+                        <tr>
+                            <td>198</td><td>Canacue HAROLD ALFONSO TEJADA</td><td>col</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="team" id="team_UNOXPROCYCLINGTEAM">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">UNO-X PRO CYCLING TEAM</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>201</td><td>Kristoff ALEXANDER</td><td>nor</td>
+                        </tr>
+                        <tr>
+                            <td>202</td><td>Abrahamsen JONAS</td><td>nor</td>
+                        </tr>
+                        <tr>
+                            <td>203</td><td>Charmig ANTHON</td><td>den</td>
+                        </tr>
+                        <tr>
+                            <td>204</td><td>Johannessen TOBIAS HALLAND</td><td>nor</td>
+                        </tr>
+                        <tr>
+                            <td>205</td><td>Tiller RASMUS</td><td>nor</td>
+                        </tr>
+                        <tr>
+                            <td>206</td><td>Tr&aelig;en TORSTEIN</td><td>nor</td>
+                        </tr>
+                        <tr>
+                            <td>207</td><td>W&aelig;renskjold S&Oslash;REN</td><td>nor</td>
+                        </tr>
+                        <tr>
+                            <td>208</td><td>Wilsly GREGAARD JONAS</td><td>den</td>
+                        </tr>
+                    </table>
+                </td><td>
+                    <table class="team" id="team_TOTALENERGIES">
+                        <thead align="left">
+                            <tr>
+                                <th colspan="3">TOTALENERGIES</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>211</td><td>Sagan PETER</td><td>svk</td>
+                        </tr>
+                        <tr>
+                            <td>212</td><td>Boasson-hagen EDVALD</td><td>nor</td>
+                        </tr>
+                        <tr>
+                            <td>213</td><td>Burgaudeau MATHIEU</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>214</td><td>Cras STEFF</td><td>bel</td>
+                        </tr>
+                        <tr>
+                            <td>215</td><td>Ferron VALENTIN</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>216</td><td>Latour PIERRE</td><td>fra</td>
+                        </tr>
+                        <tr>
+                            <td>217</td><td>Oss DANIEL</td><td>ita</td>
+                        </tr>
+                        <tr>
+                            <td>218</td><td>Turgis ANTHONY</td><td>fra</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

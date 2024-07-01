@@ -1,0 +1,31 @@
+span {
+  display: block;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+}
+.span-img {
+  margin-top: 20px;
+  background-image: url(../sprite_smalljerseys.png);
+  width: 60px;
+  height: 64px;
+}
+.span-name {
+  margin-top: 5px;
+  text-align: center;
+  width: 60px;
+  height: 45px;   // depends on the largest size of the team names.
+}
+a {
+  margin-right: 20px;
+  float: left;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  text-decoration: none;
+}

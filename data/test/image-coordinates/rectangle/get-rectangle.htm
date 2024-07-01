@@ -1,0 +1,70 @@
+<head>
+<title>Javascript example to select a rectangle on an image in
+	the browser.</title>
+
+<script type="text/javascript">
+<!--
+// Adapted from:
+// Javascript example to find the mouse coordinates on an image in the browser.
+// http://www.chestysoft.com/imagefile/javascript/get-coordinates.asp
+
+  var myImg;
+
+  function myOnLoad() {
+    myImg = document.getElementById("myImgId");
+    myImg.onmousedown = getCoordinates;
+  }
+  function findPosition(elem) {
+    if (typeof (elem.offsetParent) != "undefined") {
+      for (var posX = 0, posY = 0; elem; elem = elem.offsetParent) {
+        posX += elem.offsetLeft;
+        posY += elem.offsetTop;
+      }
+      return [ posX, posY ];
+    } else {
+      return [ elem.x, elem.y ];
+    }
+  }
+
+  function getCoordinates(e) {
+    var x = 0;
+    var y = 0;
+    var imgPos;
+    imgPos = findPosition(myImg);
+    if (!e)
+      var e = window.event;
+    if (e.pageX || e.pageY) {
+      x = e.pageX;
+      y = e.pageY;
+    } else if (e.clientX || e.clientY) {
+      x = e.clientX + document.body.scrollLeft
+          + document.documentElement.scrollLeft;
+      y = e.clientY + document.body.scrollTop
+          + document.documentElement.scrollTop;
+    }
+    x = x - imgPos[0];
+    y = y - imgPos[1];
+    document.getElementById("x1").innerHTML = x;
+    document.getElementById("y1").innerHTML = y;
+  }
+//-->
+</script>
+
+</head>
+<body onload="myOnLoad()">
+	<p>
+		<strong>Point:</strong>
+	</p>
+	<p>
+		X: <span id="x1"></span>
+	</p>
+	<p>
+		Y: <span id="y1"></span>
+	</p>
+  <img src="little-white.png" width="400" height="300" alt="" id="myImgId"
+     border="1" />
+  <p>Click on the image to set the coordinates.</p>
+  
+</body>
+
+</html>

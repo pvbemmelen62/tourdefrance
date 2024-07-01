@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Get text width in pixels</title>
+
+<script type="text/javascript">
+function myLoad() {
+  var size = getTextSize("mama");
+  var elem = null;
+  elem = document.getElementById("width");
+  elem.textContent = size.width;
+  elem = document.getElementById("height");
+  elem.textContent = size.height;
+}
+function getTextSize(txt) {
+  var test = document.getElementById("test");
+  test.textContent = txt;
+  test.style.fontSize = 10;
+  var height = (test.clientHeight + 1);
+  var width = (test.clientWidth + 1);
+  return { height: height, width: width };
+}
+</script>
+<style type="text/css">
+#test {
+  position: absolute;
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  white-space: nowrap; /* Thanks to Herb Caudill comment */
+}
+</style>
+</head>
+<body onload="myLoad();">
+<div>Size:
+  <div>width: <span id="width"></span></div>
+  <div>height: <span id="height"></span></div>
+</div>
+<div id="test">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+</body>
+
+</html>
