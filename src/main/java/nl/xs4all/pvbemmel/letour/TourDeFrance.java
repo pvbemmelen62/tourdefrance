@@ -230,11 +230,8 @@ public class TourDeFrance {
         @SuppressWarnings("unused")
         Attribute hrefR = anchorR.getAttribute("href");
         String riderName = anchorR.getTextNormalize();
-        String[] firstAndLastName = getFirstAndLastName(riderName);
-        String firstName = firstAndLastName[0];
-        String lastName = firstAndLastName[1];
-        Cyclist cyclist = new Cyclist(riderNumber, firstName, lastName,
-            riderCountry);
+        //riderName = riderName.toLowerCase();
+        Cyclist cyclist = new Cyclist(riderNumber, riderName, riderCountry);
         team.addCyclist(cyclist);
       }
     }
@@ -415,9 +412,19 @@ public class TourDeFrance {
     Element style = new Element("style");
     head.addContent(style);
     style.setAttribute("type", "text/css");
-    style.setText("div#teamsIndexLink {\n" + "  position: fixed;\n"
-        + "  top: 0;\n" + "  right: 0;\n" + "  border: 3px solid #8AC007;\n"
-        + "  font-size: 200%\n" + "  background: white;\n" + "}\n");
+    style.setText(
+          "body {\n"
+        + "  font-family: Arial, Helvetica, sans-serif;\n"
+        + "}\n"
+        + "div#teamsIndexLink {\n"
+        + "  position: fixed;\n"
+        + "  top: 0;\n"
+        + "  right: 0;\n"
+        + "  border: 3px solid #8AC007;\n"
+        + "  font-size: 200%\n"
+        + "  background: white;\n"
+        + "}\n"
+    );
 
     Element body = new Element("body");
     html.addContent(body);
@@ -456,15 +463,32 @@ public class TourDeFrance {
     Element style = new Element("style");
     style.setAttribute("type", "text/css");
     head.addContent(style);
-    style.setText("td {\n" + "  padding: 0 30 0 0;\n" + "}\n"
+    style.setText(
+          "body {\n"
+        + "  font-family: Arial, Helvetica, sans-serif;\n"
+        + "}\n"
+        + "td {\n"
+        + "  padding: 0 30 0 0;\n"
+        + "}\n"
         + ".team td:nth-child(1) { width: 80; }\n"
         + ".team td:nth-child(3) { width: 100; }\n"
-        + "div#cyclistsIndexLink {\n" + "  position: fixed;\n" + "  top: 0;\n"
-        + "  right: 0;\n" + "  border: 3px solid #8AC007;\n"
-        + "  font-size: 200%\n" + "  background: white;\n" + "}\n"
-        + "div#teamNamesLink {\n" + "  position: fixed;\n" + "  top: 50;\n"
-        + "  right: 0;\n" + "  border: 3px solid #8AC007;\n"
-        + "  font-size: 200%\n" + "  background: white;\n" + "}\n");
+        + "div#cyclistsIndexLink {\n"
+        + "  position: fixed;\n"
+        + "  top: 0;\n"
+        + "  right: 0;\n"
+        + "  border: 3px solid #8AC007;\n"
+        + "  font-size: 200%\n"
+        + "  background: white;\n"
+        + "}\n"
+        + "div#teamNamesLink {\n"
+        + "  position: fixed;\n"
+        + "  top: 50;\n"
+        + "  right: 0;\n"
+        + "  border: 3px solid #8AC007;\n"
+        + "  font-size: 200%\n"
+        + "  background: white;\n"
+        + "}\n"
+    );
     Element script = new Element("script");
     head.addContent(script);
     script.setText("\n"
@@ -472,7 +496,7 @@ public class TourDeFrance {
        + "   let myString = window.location.href;\n"
        + "   let myRegexp = /(?:[^#]*)#(.*)/;\n"
        + "   let match = myRegexp.exec(myString);\n"
-       + "   let id = match[1];\n"
+       + "   let id = decodeURIComponent(match[1]);\n"
        + "   console.log(\"id: \" + id);\n"
        + "   let elem = document.getElementById(id);\n"
        + "   elem.style.backgroundColor = '#e5e5e5';\n"
@@ -564,7 +588,11 @@ public class TourDeFrance {
     Element style = new Element("style");
     style.setAttribute("type", "text/css");
     html.addContent(style);
-    style.setText("td {\n" + "  padding: 0 30 0 0;\n" + "}\n");
+    style.setText(
+         "td {\n"
+       + "  padding: 0 30 0 0;\n"
+       + "}\n"
+    );
     Element body = new Element("body");
     html.addContent(body);
     Element table = new Element("table");
@@ -642,11 +670,28 @@ public class TourDeFrance {
     Element style = new Element("style");
     style.setAttribute("type", "text/css");
     html.addContent(style);
-    style.setText("td {\n" + "  padding: 0 10 0 0;\n" + "}\n" + ".cycnum {\n"
-        + "  text-align: right;\n" + "  padding-right: 30;\n" + "}\n"
-        + "div#topbar {\n" + "  position: fixed;\n" + "  top: 0;\n"
-        + "  left: 0;\n" + "  border: 3px solid #8AC007;\n"
-        + "  font-size: 200%;\n" + "  background: white;\n" + "}\n");
+    style.setText(
+          "body {\n"
+        + "  font-family: Arial, Helvetica, sans-serif;\n"
+        + "}\n"
+        + "td {\n"
+        + "  padding: 0 10 0 0;\n"
+        + "}\n"
+        + ".cycnum {\n"
+        + "  text-align: right;\n"
+        + "  padding-right: 30;\n"
+        + "}\n"
+        + "div#topbar {\n"
+        + "  position: fixed;\n"
+        + "  top: 0;\n"
+        + "  left: 0;\n"
+        + "  border: 3px solid #8AC007;\n"
+        + "  font-size: 200%;\n"
+        + "  background: white;\n"
+        + "}\n"
+        + "table tr:nth-child(even) {background: #EEE};\n"
+        + "table tr:nth-child(odd) {background: #FFF};\n"
+    );
     Element body = new Element("body");
     html.addContent(body);
     Element div = new Element("div");
@@ -682,13 +727,15 @@ public class TourDeFrance {
         th.setText(s);
       }
     }
+    Element tbody = new Element("tbody");
+    table.addContent(tbody);
     Character firstChar = null;
     for (ArrayList<Object> value : cyclistsIndex.values()) {
       String part = (String) value.get(0);
       Cyclist c = (Cyclist) value.get(1);
       Team t = (Team) value.get(2);
       Element tr = new Element("tr");
-      table.addContent(tr);
+      tbody.addContent(tr);
       Element td = new Element("td");
       tr.addContent(td);
       Character fc = part.charAt(0);

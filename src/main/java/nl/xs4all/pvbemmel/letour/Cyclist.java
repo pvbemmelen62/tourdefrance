@@ -1,29 +1,20 @@
 package nl.xs4all.pvbemmel.letour;
 
 class Cyclist {
-  private String firstName;
-  private String lastName;
+  private String name;
   private String country;
   private int number;
 
   
   public Cyclist() {
   }
-  public Cyclist(int number, String firstName, String lastName,
-      String country) {
-    this.firstName = firstName;
-    this.lastName = lastName;
+  public Cyclist(int number, String name, String country) {
+    this.name = name;
     this.country = country;
     this.number = number;
   }
-  public String getFirstName() {
-    return firstName;
-  }
-  public String getLastName() {
-    return lastName;
-  }
   public String getName() {
-    return firstName + " " + lastName;
+    return name;
   }
   public String getCountry() {
     return country;
@@ -39,14 +30,13 @@ class Cyclist {
   }
 
   public String toString() {
-    String rv = String.format("[%4d, %s, %s, (%s)]", number, firstName,
-        lastName, country);
+    String rv = String.format("[%4d, %s, %s, (%s)]", number, name, country);
     return rv;
   }
   
   public static class Test {
     public static void main(String[] args) {
-      Cyclist c = new Cyclist(1, "Paul", "van Bemmelen", "Ned");
+      Cyclist c = new Cyclist(1, "Paul van Bemmelen", "Ned");
       System.out.println(c);
       System.out.flush();
     }
