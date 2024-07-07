@@ -73,15 +73,6 @@ public class TourDeFrance {
     File file = new File("data/starters-tidy.html");
     Document doc = null;
     if (file.exists()) {
-      // TODO 
-//      [Fatal Error] :7:7: The element type "meta" must be terminated by the matching end-tag "</meta>".
-//      Exception in thread "main" org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 7; The element type "meta" must be terminated by the matching end-tag "</meta>".
-//        at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
-//        at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
-//        at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:122)
-//        at nl.xs4all.pvbemmel.letour.DocumentStuff.readDocument(DocumentStuff.java:52)
-//        at nl.xs4all.pvbemmel.letour.TourDeFrance.main0(TourDeFrance.java:76)
-//        at nl.xs4all.pvbemmel.letour.TourDeFrance.main(TourDeFrance.java:52)
       FileInputStream fis = new FileInputStream(file);
       doc = readDocument(fis);
       fis.close();
@@ -602,7 +593,11 @@ public class TourDeFrance {
       table.addContent(tr);
       Element td = new Element("td");
       tr.addContent(td);
-      td.setText(teamName);
+      Element anchor = new Element("a");
+      anchor.setAttribute("href",
+        "teamsIndex.html#team_" + TeamNameId.getTeamNameId(teamName));
+      anchor.setText(teamName);
+      td.addContent(anchor);
       td = new Element("td");
       tr.addContent(td);
       td.setText("" + teamsIndex.get(teamName));
